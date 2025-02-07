@@ -70,7 +70,7 @@ public class ShopDataSlotS2CPacket {
             currentSlot.setLock(locked);
 
             if(this.itemStack.getItem() instanceof IGun iGun){
-                TimelessAPI.getClientGunIndex(iGun.getGunId(this.itemStack)).ifPresent(gunIndex -> currentSlot.setTexture(gunIndex.getHUDTexture()));
+                TimelessAPI.getClientGunIndex(iGun.getGunId(this.itemStack)).ifPresent(gunIndex -> currentSlot.setTexture(gunIndex.getDefaultDisplay().getHUDTexture()));
             }
 
             if(!CSGameShopScreen.refreshFlag){

@@ -687,7 +687,7 @@ private void autoStartLogic(){
                     .setTeamName(Component.literal(winnerTeam.name.toUpperCase(Locale.ROOT))).build();
         }
         this.sendPacketToAllPlayer(new MvpMessageS2CPacket(mvpReason));
-        this.showWinnerMessage(winnerTeam.name);
+//        this.showWinnerMessage(winnerTeam.name);
         int currentScore = winnerTeam.getScores();
         int target = currentScore + 1;
         List<BaseTeam> baseTeams =this.getMapTeams().getTeams();
